@@ -5,6 +5,8 @@ import com.example.myapp.DTO.SignupRequest;
 import com.example.myapp.model.User;
 import com.example.myapp.repo.UserRepository;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,4 +55,5 @@ public class AuthController {
         return "Login successful";
     }
 
+    
 }

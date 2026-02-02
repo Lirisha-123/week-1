@@ -1,22 +1,21 @@
 package com.example.myapp.controller;
 
-import com.example.myapp.DTO.LoginRequest;
+
 import com.example.myapp.DTO.SignupRequest;
 import com.example.myapp.model.User;
 import com.example.myapp.repo.UserRepository;
 
-import java.util.Optional;
-
+import java.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+@RestController
 public class Update {
 
     @Autowired
     UserRepository db;
-
-    @PutMapping("/user/{id}")
-    public Map<String, Object> updateUser(
+     @PutMapping("/update/{id}")
+    public  Map<String, Object> updateUser(
             @PathVariable Long id,
             @RequestBody SignupRequest obj) {
 
@@ -45,4 +44,6 @@ public class Update {
         return res;
     }
 
+
+   
 }
